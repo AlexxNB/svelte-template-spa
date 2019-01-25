@@ -1,0 +1,58 @@
+
+<div id="container">
+	<img src="images/logo.png" alt=""/>
+	<div>
+		<RouterLink className="nav" to="/"><!--<Icon name="home" />--> Home</RouterLink>
+		<RouterLink className="nav" to="/about"><!--<Icon name="info" />--> About</RouterLink>
+		<div id="router-view"></div>
+	</div>
+</div>
+
+
+<script>
+	import SvelteRouter from 'svelte-router'
+	import Home from './views/Home.html'
+	import About from './views/About.html'
+  
+	const router = new SvelteRouter({
+        mode: 'history',
+        routes: {
+            '/': Home,
+            '/about': About
+        }
+	})
+  
+	export default {
+        oncreate () {
+            router.create('#router-view')
+        },
+    
+        ondestroy () {
+            router.destroy()
+        },
+    
+        components: {
+            RouterLink: SvelteRouter.RouterLink
+        }
+	}
+  </script>
+
+<style type="text/scss">
+	@import "./styles/vars";
+
+	:global(a.nav) {
+		color: rgb(78, 81, 241);
+	}
+
+	:global(a.router-link-active) {
+		color: $nav-color-active;
+	}
+
+	img{
+		height:100px;
+		margin-bottom: 20px;
+	}
+	#container{
+		text-align: center;
+	}
+</style>
