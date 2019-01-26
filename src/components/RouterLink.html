@@ -1,0 +1,17 @@
+<RouterLink className="{class}" to="{to}">
+    <slot></slot>
+</RouterLink>
+<script>
+import SvelteRouter from 'svelte-router'
+export default {
+    data:function(){
+        return{
+            to:'/',
+            class:'nav'
+        }
+    },
+    components: {
+        RouterLink: SvelteRouter.RouterLink,
+    }
+}
+</script>

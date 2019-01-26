@@ -1,0 +1,22 @@
+<div id="router-view"></div>
+
+<script>
+import SvelteRouter from 'svelte-router'
+import Home from './../views/Home.html'
+import About from './../views/About.html'
+import Routes from './../routes'
+
+const Router = {
+    r: new SvelteRouter(Routes)
+}
+
+export default {
+        oncreate () {
+            Router.r.create('#router-view')
+        },
+    
+        ondestroy () {
+            Router.r.destroy()
+        },
+}
+</script>
