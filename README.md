@@ -1,6 +1,6 @@
 # Svelte SPA Template
 
-This is a project template for [Svelte](https://svelte.technology) Single Page Application. It lives at https://github.com/AlexxNB/svelte-template-router.
+This is a project template for [Svelte](https://svelte.technology) Single Page Application. It lives at https://github.com/AlexxNB/svelte-template-spa.
 
 It is based on [template](https://github.com/sveltejs/template) and [svelte-router](https://github.com/jikkai/svelte-router) as a router.
 
@@ -20,7 +20,7 @@ To create a new project based on this template using [degit](https://github.com/
 ```bash
 npm install -g degit # you only need to do this once
 
-degit AlexxNB/svelte-template-router svelte-spa
+degit AlexxNB/svelte-template-spa svelte-spa
 cd svelte-spa
 ```
 
@@ -53,7 +53,7 @@ export default{
 Install the dependencies...
 
 ```bash
-cd svelte-app
+cd svelte-spa
 npm install
 ```
 
