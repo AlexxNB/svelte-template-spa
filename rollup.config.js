@@ -3,7 +3,6 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
 import scss from 'rollup-plugin-scss'
-import cleaner from 'rollup-plugin-cleaner'
 import html from 'rollup-plugin-fill-html';
 import path from 'path'
 import serve from 'rollup-plugin-serve';
